@@ -1,1 +1,2 @@
 # university
+The University Portal Web Application System is an online platform that serves as a one-stop-shop for all student, faculty, and staff-related information and services. The platform will provide an interactive and user-friendly interface for students to access information on their academic records, course schedules, assignments, and more. Faculty and staff will also have access to important information such as department information and academic calendars.
