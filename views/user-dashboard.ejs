@@ -8,22 +8,24 @@
                         <div class="col-12">
                             <div class="card h-100">
                                 <div class="card-header p-3">
-                                    <h4 class="font-weight-bolder text-dark text-gradient">Calendar</h4>
-                                    <p class="text-sm mb-0 widget-calendar-day">
-                                        {{currentDay | date: 'LLLL dd EEEE, yyyy'}}
-                                    </p>
-                                    <div class="d-flex justify-content-end">
-                                        <span class="badge badge-info ms-auto">{{period}}</span>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h4 class="font-weight-bolder text-dark text-gradient">Calendar</h4>
+                                            <p class="text-sm mb-0 widget-calendar-day">
+                                                {{currentDay | date: 'LLLL dd EEEE, yyyy'}}
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6 d-flex justify-content-end align-items-center">
+                                            <span class="badge badge-info ms-auto">{{period}}</span>
+                                        </div>
                                     </div>
                                 </div>
-
                                 <div class="card-body p-1">
                                     <div
                                         class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
                                         <div class="dataTable-container table-responsive">
                                             <div class="d-flex justify-content-center">
-                                                <div id='timetable-loader' class="spinner-border"
-                                                    role="status">
+                                                <div id='timetable-loader' class="spinner-border" role="status">
                                                 </div>
                                             </div>
                                             <table class="table table-flush " id="timetable" hidden="">
@@ -54,12 +56,15 @@
                                                             </div>
                                                         </td>
                                                         <td class="text-xs font-weight-bold p-2 text-wrap">
-                                                            <div ng-repeat="s in timetable | filter: 'Monday' | filter: '08:00 AM' | filter: '11:00 AM' | filter: userId">
-                                                                <div class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
+                                                            <div
+                                                                ng-repeat="s in timetable | filter: 'Monday' | filter: '08:00 AM' | filter: '11:00 AM' | filter: userId">
+                                                                <div
+                                                                    class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
                                                                     <div class="full-background"></div>
                                                                     <div class="card-body">
                                                                         <small>{{s.units.code}}</small>
-                                                                        <p class="text-sm font-weight-bold my-1">{{s.units.name}}</p>
+                                                                        <p class="text-sm font-weight-bold my-1">
+                                                                            {{s.units.name}}</p>
                                                                         <small class="text-light">{{s.courses.code}}
                                                                             ({{s.halls.name}})</small>
                                                                     </div>
@@ -67,12 +72,15 @@
                                                             </div>
                                                         </td>
                                                         <td class="text-xs font-weight-bold p-2 text-wrap">
-                                                            <div ng-repeat="s in timetable | filter: 'Monday' | filter: '11:00 AM' | filter: '02:00 PM' | filter: userId">
-                                                                <div class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
+                                                            <div
+                                                                ng-repeat="s in timetable | filter: 'Monday' | filter: '11:00 AM' | filter: '02:00 PM' | filter: userId">
+                                                                <div
+                                                                    class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
                                                                     <div class="full-background"></div>
                                                                     <div class="card-body">
                                                                         <small>{{s.units.code}}</small>
-                                                                        <p class="text-sm font-weight-bold my-1">{{s.units.name}}</p>
+                                                                        <p class="text-sm font-weight-bold my-1">
+                                                                            {{s.units.name}}</p>
                                                                         <small class="text-light">{{s.courses.code}}
                                                                             ({{s.halls.name}})</small>
                                                                     </div>
@@ -80,12 +88,15 @@
                                                             </div>
                                                         </td>
                                                         <td class="text-xs font-weight-bold p-2 text-wrap">
-                                                            <div ng-repeat="s in timetable | filter: 'Monday' | filter: '02:00 PM' | filter: '05:00 PM' | filter: userId">
-                                                                <div class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
+                                                            <div
+                                                                ng-repeat="s in timetable | filter: 'Monday' | filter: '02:00 PM' | filter: '05:00 PM' | filter: userId">
+                                                                <div
+                                                                    class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
                                                                     <div class="full-background"></div>
                                                                     <div class="card-body">
                                                                         <small>{{s.units.code}}</small>
-                                                                        <p class="text-sm font-weight-bold my-1">{{s.units.name}}</p>
+                                                                        <p class="text-sm font-weight-bold my-1">
+                                                                            {{s.units.name}}</p>
                                                                         <small class="text-light">{{s.courses.code}}
                                                                             ({{s.halls.name}})</small>
                                                                     </div>
@@ -113,11 +124,13 @@
                                                         <td class="text-xs font-weight-bold p-2 text-wrap">
                                                             <div
                                                                 ng-repeat="s in timetable | filter: 'Tuesday' | filter: '08:00 AM' | filter: '11:00 AM' | filter: userId">
-                                                                <div class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
+                                                                <div
+                                                                    class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
                                                                     <div class="full-background"></div>
                                                                     <div class="card-body">
                                                                         <small>{{s.units.code}}</small>
-                                                                        <p class="text-sm font-weight-bold my-1">{{s.units.name}}</p>
+                                                                        <p class="text-sm font-weight-bold my-1">
+                                                                            {{s.units.name}}</p>
                                                                         <small class="text-light">{{s.courses.code}}
                                                                             ({{s.halls.name}})</small>
                                                                     </div>
@@ -125,12 +138,15 @@
                                                             </div>
                                                         </td>
                                                         <td class="text-xs font-weight-bold p-2 text-wrap">
-                                                            <div ng-repeat="s in timetable | filter: 'Tuesday' | filter: '11:00 AM' | filter: '02:00 PM' | filter: userId">
-                                                                <div class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
+                                                            <div
+                                                                ng-repeat="s in timetable | filter: 'Tuesday' | filter: '11:00 AM' | filter: '02:00 PM' | filter: userId">
+                                                                <div
+                                                                    class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
                                                                     <div class="full-background"></div>
                                                                     <div class="card-body">
                                                                         <small>{{s.units.code}}</small>
-                                                                        <p class="text-sm font-weight-bold my-1">{{s.units.name}}</p>
+                                                                        <p class="text-sm font-weight-bold my-1">
+                                                                            {{s.units.name}}</p>
                                                                         <small class="text-light">{{s.courses.code}}
                                                                             ({{s.halls.name}})</small>
                                                                     </div>
@@ -138,12 +154,15 @@
                                                             </div>
                                                         </td>
                                                         <td class="text-xs font-weight-bold p-2 text-wrap">
-                                                            <div ng-repeat="s in timetable | filter: 'Tuesday' | filter: '02:00 PM' | filter: '05:00 PM' | filter: userId">
-                                                                <div class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
+                                                            <div
+                                                                ng-repeat="s in timetable | filter: 'Tuesday' | filter: '02:00 PM' | filter: '05:00 PM' | filter: userId">
+                                                                <div
+                                                                    class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
                                                                     <div class="full-background"></div>
                                                                     <div class="card-body">
                                                                         <small>{{s.units.code}}</small>
-                                                                        <p class="text-sm font-weight-bold my-1">{{s.units.name}}</p>
+                                                                        <p class="text-sm font-weight-bold my-1">
+                                                                            {{s.units.name}}</p>
                                                                         <small class="text-light">{{s.courses.code}}
                                                                             ({{s.halls.name}})</small>
                                                                     </div>
@@ -169,12 +188,15 @@
                                                             </div>
                                                         </td>
                                                         <td class="text-xs font-weight-bold p-2 text-wrap">
-                                                            <div ng-repeat="s in timetable | filter: 'Wednesday' | filter: '08:00 AM' | filter: '11:00 AM' | filter: userId">
-                                                                <div class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
+                                                            <div
+                                                                ng-repeat="s in timetable | filter: 'Wednesday' | filter: '08:00 AM' | filter: '11:00 AM' | filter: userId">
+                                                                <div
+                                                                    class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
                                                                     <div class="full-background"></div>
                                                                     <div class="card-body">
                                                                         <small>{{s.units.code}}</small>
-                                                                        <p class="text-sm font-weight-bold my-1">{{s.units.name}}</p>
+                                                                        <p class="text-sm font-weight-bold my-1">
+                                                                            {{s.units.name}}</p>
                                                                         <small class="text-light">{{s.courses.code}}
                                                                             ({{s.halls.name}})</small>
                                                                     </div>
@@ -182,12 +204,15 @@
                                                             </div>
                                                         </td>
                                                         <td class="text-xs font-weight-bold p-2 text-wrap">
-                                                            <div ng-repeat="s in timetable | filter: 'Wednesday' | filter: '11:00 AM' | filter: '02:00 PM' | filter: userId">
-                                                                <div class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
+                                                            <div
+                                                                ng-repeat="s in timetable | filter: 'Wednesday' | filter: '11:00 AM' | filter: '02:00 PM' | filter: userId">
+                                                                <div
+                                                                    class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
                                                                     <div class="full-background"></div>
                                                                     <div class="card-body">
                                                                         <small>{{s.units.code}}</small>
-                                                                        <p class="text-sm font-weight-bold my-1">{{s.units.name}}</p>
+                                                                        <p class="text-sm font-weight-bold my-1">
+                                                                            {{s.units.name}}</p>
                                                                         <small class="text-light">{{s.courses.code}}
                                                                             ({{s.halls.name}})</small>
                                                                     </div>
@@ -195,12 +220,15 @@
                                                             </div>
                                                         </td>
                                                         <td class="text-xs font-weight-bold p-2 text-wrap">
-                                                            <div ng-repeat="s in timetable | filter: 'Wednesday' | filter: '02:00 PM' | filter: '05:00 PM' | filter: userId">
-                                                                <div class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
+                                                            <div
+                                                                ng-repeat="s in timetable | filter: 'Wednesday' | filter: '02:00 PM' | filter: '05:00 PM' | filter: userId">
+                                                                <div
+                                                                    class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
                                                                     <div class="full-background"></div>
                                                                     <div class="card-body">
                                                                         <small>{{s.units.code}}</small>
-                                                                        <p class="text-sm font-weight-bold my-1">{{s.units.name}}</p>
+                                                                        <p class="text-sm font-weight-bold my-1">
+                                                                            {{s.units.name}}</p>
                                                                         <small class="text-light">{{s.courses.code}}
                                                                             ({{s.halls.name}})</small>
                                                                     </div>
@@ -226,12 +254,15 @@
                                                             </div>
                                                         </td>
                                                         <td class="text-xs font-weight-bold p-2 text-wrap">
-                                                            <div ng-repeat="s in timetable | filter: 'Thursday' | filter: '08:00 AM' | filter: '11:00 AM' | filter: userId">
-                                                                <div class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
+                                                            <div
+                                                                ng-repeat="s in timetable | filter: 'Thursday' | filter: '08:00 AM' | filter: '11:00 AM' | filter: userId">
+                                                                <div
+                                                                    class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
                                                                     <div class="full-background"></div>
                                                                     <div class="card-body">
                                                                         <small>{{s.units.code}}</small>
-                                                                        <p class="text-sm font-weight-bold my-1">{{s.units.name}}</p>
+                                                                        <p class="text-sm font-weight-bold my-1">
+                                                                            {{s.units.name}}</p>
                                                                         <small class="text-light">{{s.courses.code}}
                                                                             ({{s.halls.name}})</small>
                                                                     </div>
@@ -239,12 +270,15 @@
                                                             </div>
                                                         </td>
                                                         <td class="text-xs font-weight-bold p-2 text-wrap">
-                                                            <div ng-repeat="s in timetable | filter: 'Thursday' | filter: '11:00 AM' | filter: '02:00 PM' | filter: userId">
-                                                                <div class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
+                                                            <div
+                                                                ng-repeat="s in timetable | filter: 'Thursday' | filter: '11:00 AM' | filter: '02:00 PM' | filter: userId">
+                                                                <div
+                                                                    class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
                                                                     <div class="full-background"></div>
                                                                     <div class="card-body">
                                                                         <small>{{s.units.code}}</small>
-                                                                        <p class="text-sm font-weight-bold my-1">{{s.units.name}}</p>
+                                                                        <p class="text-sm font-weight-bold my-1">
+                                                                            {{s.units.name}}</p>
                                                                         <small class="text-light">{{s.courses.code}}
                                                                             ({{s.halls.name}})</small>
                                                                     </div>
@@ -254,11 +288,13 @@
                                                         <td class="text-xs font-weight-bold p-2 text-wrap">
                                                             <div ng-repeat="s in timetable | filter: 'Thursday' | filter: '02:00 PM' | filter: '05:00 PM' | filter: userId"
                                                                 class="align-items-center">
-                                                                <div class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
+                                                                <div
+                                                                    class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
                                                                     <div class="full-background"></div>
                                                                     <div class="card-body">
                                                                         <small>{{s.units.code}}</small>
-                                                                        <p class="text-sm font-weight-bold my-1">{{s.units.name}}</p>
+                                                                        <p class="text-sm font-weight-bold my-1">
+                                                                            {{s.units.name}}</p>
                                                                         <small class="text-light">{{s.courses.code}}
                                                                             ({{s.halls.name}})</small>
                                                                     </div>
@@ -284,12 +320,15 @@
                                                             </div>
                                                         </td>
                                                         <td class="text-xs font-weight-bold p-2 text-wrap">
-                                                            <div ng-repeat="s in timetable | filter: 'Friday' | filter: '08:00 AM' | filter: '11:00 AM' | filter: userId">
-                                                                <div class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
+                                                            <div
+                                                                ng-repeat="s in timetable | filter: 'Friday' | filter: '08:00 AM' | filter: '11:00 AM' | filter: userId">
+                                                                <div
+                                                                    class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
                                                                     <div class="full-background"></div>
                                                                     <div class="card-body">
                                                                         <small>{{s.units.code}}</small>
-                                                                        <p class="text-sm font-weight-bold my-1">{{s.units.name}}</p>
+                                                                        <p class="text-sm font-weight-bold my-1">
+                                                                            {{s.units.name}}</p>
                                                                         <small class="text-light">{{s.courses.code}}
                                                                             ({{s.halls.name}})</small>
                                                                     </div>
@@ -297,12 +336,15 @@
                                                             </div>
                                                         </td>
                                                         <td class="text-xs font-weight-bold p-2 text-wrap">
-                                                            <div ng-repeat="s in timetable | filter: 'Friday' | filter: '11:00 AM' | filter: '02:00 PM' | filter: userId">
-                                                                <div class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
+                                                            <div
+                                                                ng-repeat="s in timetable | filter: 'Friday' | filter: '11:00 AM' | filter: '02:00 PM' | filter: userId">
+                                                                <div
+                                                                    class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
                                                                     <div class="full-background"></div>
                                                                     <div class="card-body">
                                                                         <small>{{s.units.code}}</small>
-                                                                        <p class="text-sm font-weight-bold my-1">{{s.units.name}}</p>
+                                                                        <p class="text-sm font-weight-bold my-1">
+                                                                            {{s.units.name}}</p>
                                                                         <small class="text-light">{{s.courses.code}}
                                                                             ({{s.halls.name}})</small>
                                                                     </div>
@@ -310,12 +352,15 @@
                                                             </div>
                                                         </td>
                                                         <td class="text-xs font-weight-bold p-2 text-wrap">
-                                                            <div ng-repeat="s in timetable | filter: 'Friday' | filter: '02:00 PM' | filter: '05:00 PM' | filter: userId">
-                                                                <div class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
+                                                            <div
+                                                                ng-repeat="s in timetable | filter: 'Friday' | filter: '02:00 PM' | filter: '05:00 PM' | filter: userId">
+                                                                <div
+                                                                    class="card card-background move-on-hover shadow bg-gradient-secondary opacity-6">
                                                                     <div class="full-background"></div>
                                                                     <div class="card-body">
                                                                         <small>{{s.units.code}}</small>
-                                                                        <p class="text-sm font-weight-bold my-1">{{s.units.name}}</p>
+                                                                        <p class="text-sm font-weight-bold my-1">
+                                                                            {{s.units.name}}</p>
                                                                         <small class="text-light">{{s.courses.code}}
                                                                             ({{s.halls.name}})</small>
                                                                     </div>

@@ -647,6 +647,7 @@ app.controller("myCtrl", ($scope, $http, $timeout) => {
         $('input[name="studentCheck"]:checkbox:checked').each(function (i) {
             student[i] = $(this).val();
         });
+        
         if (student.length === 0) {
             $scope.promptMsg("", "Please select atleast one checkbox!");
             return false;
